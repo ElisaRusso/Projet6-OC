@@ -1,0 +1,67 @@
+POST http://localhost:3000/api/sauces
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Zjg5NjgyMmFlNjViZDMwYzQ4MmViOWIiLCJpYXQiOjE2MDMzNTM2MjksImV4cCI6MTYwMzQ0MDAyOX0.NbY5nmjaMfHxjiqgYnp5f3j69NgnZrCz0D31jPtyJxM
+Content-Type: application/json
+
+{
+    "userId":"5f896822ae65bd30c482eb9b",
+    "name": "name",
+    "description": "description",
+    "manufacturer":"manufacturer",
+    "mainPepper": "aa",
+    "imageUrl": "http://localhost:3000/images/Capture_chopin.PNG1603269558451.png",
+    "heat": 10,
+}
+
+###
+
+GET http://localhost:3000/api/sauces
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjkxNjlhNjBjZTc1MDE0NGM0YjczMzciLCJpYXQiOjE2MDMzNjUyOTIsImV4cCI6MTYwMzQ1MTY5Mn0.KrxAiGlHkhT1tuJUZTZ7cABkY0TxTEdP7WUxll2kiJA
+###
+
+GET http://localhost:3000/api/sauces/5f8ff3b631fa3f66b8d68927
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Zjg5NjgyMmFlNjViZDMwYzQ4MmViOWIiLCJpYXQiOjE2MDMzNTM2MjksImV4cCI6MTYwMzQ0MDAyOX0.NbY5nmjaMfHxjiqgYnp5f3j69NgnZrCz0D31jPtyJxM
+
+
+###
+
+DELETE http://localhost:3000/api/sauces/5f8ff3b631fa3f66b8d68927
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1Zjg5NjgyMmFlNjViZDMwYzQ4MmViOWIiLCJpYXQiOjE2MDMzNTM3NjEsImV4cCI6MTYwMzQ0MDE2MX0.8duMVqAqjStODagZi7cydCMUVutIq5BNeSjMcltx_IM
+###
+
+PUT http://localhost:3000/api/sauces/5f8ff3b631fa3f66b8d68927
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjkxNjlhNjBjZTc1MDE0NGM0YjczMzciLCJpYXQiOjE2MDMzNjUyOTIsImV4cCI6MTYwMzQ1MTY5Mn0.KrxAiGlHkhT1tuJUZTZ7cABkY0TxTEdP7WUxll2kiJA
+Content-Type: application/json
+
+{
+    "name": "name",
+    "description": "description2",
+    "mainPepper": "aa",
+    "imageUrl": "aa",
+    "heat": 44,
+    "likes":1,
+    "dislikes":1,
+    "usersLiked":["a", "a"],
+    "usersDisliked":["a", "a"]
+
+}
+
+###
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+    "email":"email2@gmail.com",
+    "password":"mdp"
+
+}
+
+###
+
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"email2@gmail.com",
+    "password":"mdp"
+
+}
