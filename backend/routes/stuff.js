@@ -9,7 +9,6 @@ const isOwner = require("../middleware/isOwner");
 
 
 
-
 //Création d'une sauce
 router.post('/', auth, multer, stuffCtlr.createSauce);
 
@@ -23,7 +22,7 @@ router.get('/:id', auth, stuffCtlr.getOneSauce);
 router.put('/:id', auth, isOwner, multer, stuffCtlr.modifySauce);
 
 //Supression d'une sauce
-router.delete('/:id', auth, stuffCtlr.deleteSauce);
+router.delete('/:id', auth, isOwner, stuffCtlr.deleteSauce);
 
 //L'utilisateur aime une sauce
 router.post('/:id/like', auth, stuffCtlr.likeOneSauce);
