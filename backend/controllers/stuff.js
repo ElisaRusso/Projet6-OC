@@ -24,7 +24,8 @@ exports.modifySauce = (req, res, next) => {
     Sauce.findOne({ _id: req.params.id })
         .then(sauce => {
             const filename = sauce.imageUrl.split('/images/')[1];
-            fs.unlink(`images/${filename}`, () => {
+            fs.unlink(`images/${filename}`, (err) => {
+                if (err) throw err;
             })
         })
         .catch(error => res.status(500).json({ error }));
