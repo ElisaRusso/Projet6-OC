@@ -15,7 +15,7 @@ const app = express();
 
 
 
-mongoose.connect('mongodb+srv://Arthentia:dTxtX9wQlMuWsCv5@sopekocko.yscca.mongodb.net/<dbname>?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGODB_CONNECT,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
