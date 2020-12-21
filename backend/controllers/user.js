@@ -7,7 +7,7 @@ const complexity = require('complexity');
 const options = {
     uppercase: 1,
     lowercase: 1,
-    special: 1,
+    special: 1, // ! @ # $ & *
     digit: 1,
     min: 8
 }
