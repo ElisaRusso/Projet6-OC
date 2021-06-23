@@ -3,9 +3,10 @@ Remarque les commandes sont à taper sans les " ".
 
 Etape 1: Dans le dossier backend créer un fichier .env
 
-Etape 2: Dans le fichier .env insérer le texte suivant: 
-TOKEN='RANDOM_TOKEN_SECRET'
-MONGODB_CONNECT='mongodb+srv://Arthentia:dTxtX9wQlMuWsCv5@sopekocko.yscca.mongodb.net/<dbname>?retryWrites=true&w=majority'
+Etape 2: Dans le fichier .env, compléter les paramètres suivants
+avec vos identifiants vous permettant de vous connecter à votre base de donnée MongoDB:
+TOKEN='//TOKEN'
+MONGODB_CONNECT='mongodb+srv://votreMongoDb+srv'
 Puis enregistrer.
 
 Etape 3: Dans un terminal à partir du dossier frontend taper: "npm install" puis "npm start"
